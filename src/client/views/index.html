@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Sentiment Analyzer</title>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Evaluate Article Project</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/">Homepage</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <main>
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <br>
+            <br>
+            <h1 class="enter-url-header text-center">Sentiment Analysis</h1>
+            <br>
+            <h4 class="enter-url-header text-center">Enter a URL of an article / a blog to discover its sentiment.</h4>
+            <br>
+            <br>
+            <section>
+              <!-- method="POST" -->
+              <form id="form">
+
+                <div class="form-group row">
+                  <label for="article-url" class="col-sm-2 col-form-label text-center"><strong>URL</strong></label>
+                  <div class="col-sm-10">
+                    <input class="form-control-plaintext input-field" id="article-url" type="text" name="url" value="" placeholder="Enter Article URL here" >
+                  </div>
+                </div>
+                <p id="errorPara"></p>
+                <br>
+                <button
+                  type="submit"
+                  class="btn-submit btn btn-primary"
+                >
+                  Submit
+                </button>
+                <br>
+                <div id="loading" class="d-flex align-items-center hide-spinner">
+                  <strong>Loading...</strong>
+                  <div class="spinner-border ml-auto" role="status" aria-hidden="true"></div>
+                </div>
+                <br>
+                <hr class="hr-4">
+                <br>
+              </form>
+            </section>
+            <h4 class="text-center">Form Results:</h4>
+            <br>
+            <br>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-4">
+              <h4 class="text-center">Text</h4>
+              <br>
+              <div class="text-center" id="text"></div>
+              <br>
+            </div>
+          <div class="col-4">
+            <h4 class="text-center">Subjectivity</h4>
+            <br>  
+            <div id="subjectivity"></div>
+              <br>
+          </div>
+          <div class="col-4">
+            <h4 class="text-center">Irony</h4>
+            <br>  
+            <div id="irony"></div>
+              <br>
+          </div>
+        </div>
+
+        <br>
+        <div class="row">
+          <div class="col-4">
+              <h4 class="text-center">Confidence</h4>
+              <br>
+              <div id="confidence"></div>
+              <br>
+            </div>
+          <div class="col-4">
+            <h4 class="text-center">Agreement</h4>
+            <br>  
+            <div id="agreement"></div>
+              <br>
+          </div>
+          <div class="col-4">
+            <h4 class="text-center">Score Tag</h4>
+            <br>  
+            <div id="score_tag"></div>
+              <br>
+          </div>
+        </div>
+
+      </div>
+      <br>
+            <br>
+            <br>
+    </main>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/service-worker.js')
+        })
+      }
+    </script>
+
+
+
+
+
+
+<footer class="bg-dark text-center text-white">
+  <!-- Grid container -->
+  <div class="container p-4 pb-0">
+    <!-- Section: Form -->
+    <section class="">
+      <form action="">
+        <!--Grid row-->
+        <div class="row d-flex justify-content-center">
+          <!--Grid column-->
+          <div class="col-auto">
+            <p class="pt-2">
+              <strong>Sign up for our newsletter</strong>
+            </p>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-md-5 col-12">
+            <!-- Email input -->
+            <div class="form-outline form-white mb-4">
+              <input type="email" id="form5Example2" class="form-control" />
+              <label class="form-label" for="form5Example2">Email address</label>
+            </div>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-auto">
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-outline-light mb-4">
+              Subscribe
+            </button>
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </form>
+    </section>
+    <!-- Section: Form -->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2020 Copyright:
+    <a class="text-white" href="/">Homepage</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+
+
+
+
+
+
+  </body>
+</html>
+
+   
+<!-- <div id="text"></div>
+<div id="agreement"></div>
+<div id="subjectivity"></div>
+<div id="confidence"></div>
+<div id="irony"></div>
+<div id="score_tag"></div> -->
