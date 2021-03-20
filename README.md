@@ -13,6 +13,12 @@ This is a webpage that evaluates News Articles with Natural Language Processing 
 
 
 How to use it:
+
+
 1-Enter Article URL in the Input Box for it
+
+
 2-Press Submit
+
+
 Enjoy the information!
